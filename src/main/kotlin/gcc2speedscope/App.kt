@@ -51,12 +51,12 @@ data class Event(
 
 
 internal
-fun Writer.writeSpeedscopeDocumentFor(log: Log) {
+fun Writer.writeSpeedscopeDocumentFor(log: Log, prettyPrint: Boolean = false) {
     renderValue(
         speedscopeDocumentFor(log),
         result = this,
         canonical = false,
-        prettyPrint = true,
+        prettyPrint = prettyPrint,
         level = 0
     )
 }

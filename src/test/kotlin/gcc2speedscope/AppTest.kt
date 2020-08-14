@@ -12,7 +12,7 @@ class AppTest {
         assertEquals(
             bufferedReaderForResource("/expected.json").readText(),
             StringWriter().run {
-                writeSpeedscopeDocumentFor(log)
+                writeSpeedscopeDocumentFor(log, prettyPrint = true)
                 toString()
             }
         )
