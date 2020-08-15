@@ -39,14 +39,16 @@ data class Log(
 
 data class Profile(
     val name: String,
-    val events: List<Event>
+    val events: List<Map<String, Any>>
 )
 
 
 data class Event(
-    val timestamp: String,
-    val category: String,
-    val payload: JsonObject
+    val sequenceNumber: Long,
+    val profile: String,
+    val type: String,
+    val frame: String,
+    val at: Long
 )
 
 
@@ -77,14 +79,14 @@ fun speedscopeDocumentFor(log: Log) = mapOf<String, Any>(
     "profiles" to log.profiles.map { profile ->
         val events = profile.events
         val startValue = 0 // or should it be `events.first().payload.at` ?
-        val endValue = events.last().payload.at
+        val endValue = events.last()["at"]
         mapOf(
             "type" to "evented",
             "name" to profile.name,
             "unit" to "bytes",
             "startValue" to startValue,
             "endValue" to endValue,
-            "events" to events.map { it.payload }
+            "events" to events
         )
     }
 )
@@ -102,18 +104,15 @@ fun parseConfigurationCacheDebugLog(reader: Reader): Log =
 private
 fun speedscopeLogFor(events: Sequence<Event>): Log {
     val frames = LinkedHashMap<String, Int>()
-    val profiles = HashMap<String, ArrayList<Event>>()
+    val profiles = HashMap<String, ArrayList<Pair<Int, Event>>>()
     events.forEach { event ->
         // map frame name to frame index
-        val jsonObject = event.payload
-        val frame: String by jsonObject
-        val frameIndex = frames.computeIfAbsent(frame) { frames.size }
-        jsonObject["frame"] = frameIndex
+        val frameIndex = frames.computeIfAbsent(event.frame) { frames.size }
 
         // group events by category
         profiles
-            .computeIfAbsent(event.category) { ArrayList() }
-            .add(event)
+            .computeIfAbsent(event.profile) { ArrayList() }
+            .add(frameIndex to event)
     }
     return Log(
         frames.keys.toList(),
@@ -121,7 +120,13 @@ fun speedscopeLogFor(events: Sequence<Event>): Log {
             Profile(
                 name,
                 events.apply {
-                    sortBy { it.payload.at }
+                    sortBy { (_, event) -> event.sequenceNumber }
+                }.map { (frameIndex, event) ->
+                    mapOf(
+                        "type" to event.type,
+                        "frame" to frameIndex,
+                        "at" to event.at
+                    )
                 }
             )
         }
@@ -137,18 +142,24 @@ val JsonObject.at: Long
 private
 fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequence<Event> {
     // Example log line:
-    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] [configuration cache state] {type:"O",frame:"Gradle",at:6}
+    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
     val linePattern = logLinePattern()
     val jsonParser = Parser.default()
     lines.forEachIndexed { index, line ->
         val matcher = linePattern.matcher(line)
         if (matcher.matches()) {
-            val timestamp = matcher.group(1)
-            val category = matcher.group(2)
-            val jsonEvent = matcher.group(3)
+            val jsonEvent = matcher.group(1)
             try {
                 val jsonObject = jsonParser.parse(StringReader(jsonEvent)) as JsonObject
-                yield(Event(timestamp, category, jsonObject))
+                yield(jsonObject.run {
+                    Event(
+                        sequenceNumber = long("sn")!!,
+                        profile = string("profile")!!,
+                        type = string("type")!!,
+                        frame = string("frame")!!,
+                        at = long("at")!!
+                    )
+                })
             } catch (e: KlaxonException) {
                 throw IllegalArgumentException("line ${index + 1}: failed to parse $jsonEvent", e)
             }
@@ -159,6 +170,6 @@ fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequenc
 
 private
 fun logLinePattern(): Pattern {
-    val logPrefix = "[DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] [configuration cache"
-    return Pattern.compile("([0-9:T.\\-]+) ${Regex.escape(logPrefix)} (state|fingerprint)\\] (.*)")
+    val logPrefix = "[DEBUG] [org.gradle.instantexecution.DefaultInstantExecution]"
+    return Pattern.compile("[0-9:T.\\-]+ ${Regex.escape(logPrefix)} (\\{.*?})")
 }
