@@ -142,7 +142,7 @@ val JsonObject.at: Long
 private
 fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequence<Event> {
     // Example log line:
-    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
+    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
     val linePattern = logLinePattern()
     val jsonParser = Parser.default()
     lines.forEachIndexed { index, line ->
@@ -170,6 +170,6 @@ fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequenc
 
 private
 fun logLinePattern(): Pattern {
-    val logPrefix = "[DEBUG] [org.gradle.instantexecution.DefaultInstantExecution]"
+    val logPrefix = "[DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache]"
     return Pattern.compile("[0-9:T.\\-]+ ${Regex.escape(logPrefix)} (\\{.*?})")
 }

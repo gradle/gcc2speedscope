@@ -51,7 +51,7 @@
 2020-08-15T09:43:51.893-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on Configuration Cache (/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/configuration-cache).
 2020-08-15T09:43:51.893-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on Configuration Cache (/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/configuration-cache).
 2020-08-15T09:43:51.894-0300 [WARN] [org.gradle.internal.featurelifecycle.LoggingIncubatingFeatureHandler] Configuration cache is an incubating feature.
-2020-08-15T09:43:51.894-0300 [LIFECYCLE] [org.gradle.instantexecution.DefaultInstantExecution] Calculating task graph as no configuration cache is available for tasks: ok
+2020-08-15T09:43:51.894-0300 [LIFECYCLE] [org.gradle.configurationcache.DefaultConfigurationCache] Calculating task graph as no configuration cache is available for tasks: ok
 2020-08-15T09:43:51.901-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Creating new cache for resourceHashesCache, path /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/6.7-20200815030000+0000/fileHashes/resourceHashesCache.bin, access org.gradle.cache.internal.DefaultCacheAccess@72005d12
 2020-08-15T09:43:51.901-0300 [DEBUG] [org.gradle.cache.internal.DefaultInMemoryCacheDecoratorFactory] Creating in-memory store for cache /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/6.7-20200815030000+0000/fileHashes/resourceHashesCache.bin (max size: 381000)
 2020-08-15T09:43:51.984-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Creating new cache for md5-checksums, path /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/checksums/md5-checksums.bin, access org.gradle.cache.internal.DefaultCacheAccess@5e3f8918
@@ -65,22 +65,22 @@
 2020-08-15T09:43:51.985-0300 [DEBUG] [org.gradle.cache.internal.DefaultInMemoryCacheDecoratorFactory] Creating in-memory store for cache /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/checksums/sha256-checksums.bin (max size: 400)
 2020-08-15T09:43:51.985-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Creating new cache for sha512-checksums, path /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/checksums/sha512-checksums.bin, access org.gradle.cache.internal.DefaultCacheAccess@5e3f8918
 2020-08-15T09:43:51.985-0300 [DEBUG] [org.gradle.cache.internal.DefaultInMemoryCacheDecoratorFactory] Creating in-memory store for cache /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/checksums/sha512-checksums.bin (max size: 400)
-2020-08-15T09:43:52.099-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts","at":2,"sn":0}
-2020-08-15T09:43:52.109-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts.fingerprints","at":92,"sn":1}
-2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"java.util.ArrayList","at":93,"sn":2}
-2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"java.util.ArrayList","at":94,"sn":3}
-2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts.fingerprints","at":94,"sn":4}
-2020-08-15T09:43:52.112-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts","at":94,"sn":5}
-2020-08-15T09:43:52.113-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment","at":96,"sn":6}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.gradleUserHomeDir","at":192,"sn":7}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":193,"sn":8}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":271,"sn":9}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.gradleUserHomeDir","at":271,"sn":10}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.jvm","at":271,"sn":11}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"java.lang.String","at":272,"sn":12}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"java.lang.String","at":320,"sn":13}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.jvm","at":320,"sn":14}
-2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment","at":320,"sn":15}
+2020-08-15T09:43:52.099-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts","at":2,"sn":0}
+2020-08-15T09:43:52.109-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts.fingerprints","at":92,"sn":1}
+2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"java.util.ArrayList","at":93,"sn":2}
+2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"java.util.ArrayList","at":94,"sn":3}
+2020-08-15T09:43:52.111-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts.fingerprints","at":94,"sn":4}
+2020-08-15T09:43:52.112-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts","at":94,"sn":5}
+2020-08-15T09:43:52.113-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment","at":96,"sn":6}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.gradleUserHomeDir","at":192,"sn":7}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":193,"sn":8}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":271,"sn":9}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.gradleUserHomeDir","at":271,"sn":10}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.jvm","at":271,"sn":11}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"java.lang.String","at":272,"sn":12}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"java.lang.String","at":320,"sn":13}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.jvm","at":320,"sn":14}
+2020-08-15T09:43:52.114-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment","at":320,"sn":15}
 2020-08-15T09:43:52.116-0300 [INFO] [org.gradle.internal.buildevents.BuildLogger] Starting Build
 2020-08-15T09:43:52.116-0300 [DEBUG] [org.gradle.internal.buildevents.BuildLogger] Gradle user home: /work/speedscope/intTestHomeDir/distributions-jvm
 2020-08-15T09:43:52.116-0300 [DEBUG] [org.gradle.internal.buildevents.BuildLogger] Current dir: /work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400
@@ -142,16 +142,16 @@
 2020-08-15T09:43:52.581-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileHashes.bin (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/fileHashes/fileHashes.bin)
 2020-08-15T09:43:52.610-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on settings generic class cache for settings file '/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/settings.gradle' (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/scripts/ebqj9vguotizb6n9pqkk6u9xk).
 2020-08-15T09:43:52.636-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileHashes.bin (/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/6.7-20200815030000+0000/fileHashes/fileHashes.bin)
-2020-08-15T09:43:52.637-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile","at":322,"sn":16}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.file","at":410,"sn":17}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":411,"sn":18}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":563,"sn":19}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.file","at":563,"sn":20}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.hash","at":563,"sn":21}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.internal.hash.HashCode","at":564,"sn":22}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.internal.hash.HashCode","at":581,"sn":23}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.hash","at":581,"sn":24}
-2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile","at":581,"sn":25}
+2020-08-15T09:43:52.637-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile","at":322,"sn":16}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.file","at":410,"sn":17}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":411,"sn":18}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":563,"sn":19}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.file","at":563,"sn":20}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.hash","at":563,"sn":21}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.internal.hash.HashCode","at":564,"sn":22}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.internal.hash.HashCode","at":581,"sn":23}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.hash","at":581,"sn":24}
+2020-08-15T09:43:52.638-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile","at":581,"sn":25}
 2020-08-15T09:43:52.640-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Creating new cache for java-modules, path /work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/fileContent/java-modules.bin, access org.gradle.cache.internal.DefaultCacheAccess@61a42ba5
 2020-08-15T09:43:52.640-0300 [DEBUG] [org.gradle.cache.internal.DefaultInMemoryCacheDecoratorFactory] Creating in-memory store for cache /work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/fileContent/java-modules.bin (max size: 9500)
 2020-08-15T09:43:52.640-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Acquiring file lock for file content cache (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/fileContent)
@@ -283,16 +283,16 @@
 2020-08-15T09:43:52.841-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on proj generic class cache for build file '/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/build.gradle' (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/scripts/1qfps29hdr7onru0s42xiftb0).
 2020-08-15T09:43:52.841-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on proj generic class cache for build file '/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/build.gradle' (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/scripts/1qfps29hdr7onru0s42xiftb0).
 2020-08-15T09:43:52.851-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on proj generic class cache for build file '/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/build.gradle' (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/scripts/1qfps29hdr7onru0s42xiftb0).
-2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile","at":583,"sn":26}
-2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.file","at":586,"sn":27}
-2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":587,"sn":28}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":736,"sn":29}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.file","at":736,"sn":30}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.hash","at":736,"sn":31}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"O","frame":"org.gradle.internal.hash.HashCode","at":737,"sn":32}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.internal.hash.HashCode","at":754,"sn":33}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.hash","at":754,"sn":34}
-2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"fingerprint","type":"C","frame":"org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile","at":754,"sn":35}
+2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile","at":583,"sn":26}
+2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.file","at":586,"sn":27}
+2020-08-15T09:43:52.858-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"java.io.File","at":587,"sn":28}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"java.io.File","at":736,"sn":29}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.file","at":736,"sn":30}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.hash","at":736,"sn":31}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"O","frame":"org.gradle.internal.hash.HashCode","at":737,"sn":32}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.internal.hash.HashCode","at":754,"sn":33}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.hash","at":754,"sn":34}
+2020-08-15T09:43:52.859-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"fingerprint","type":"C","frame":"org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile","at":754,"sn":35}
 2020-08-15T09:43:52.900-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Realize task :ok' completed
 2020-08-15T09:43:52.914-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Cross-configure project :' completed
 2020-08-15T09:43:52.915-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Realize task :sub:ok' completed
@@ -382,277 +382,277 @@
 2020-08-15T09:43:52.944-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Notify task graph whenReady listeners' completed
 2020-08-15T09:43:52.944-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Calculate task graph'
 2020-08-15T09:43:52.944-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Calculate task graph' completed
-2020-08-15T09:43:52.945-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Store instant execution state' started
-2020-08-15T09:43:52.953-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"Gradle","at":0,"sn":0}
-2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"included builds","at":6,"sn":1}
-2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"included builds","at":8,"sn":2}
-2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"build cache","at":8,"sn":3}
-2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache","at":10,"sn":4}
-2020-08-15T09:43:52.955-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_dn_","at":59,"sn":5}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_dn_","at":64,"sn":6}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_owner_","at":64,"sn":7}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_owner_","at":69,"sn":8}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache.directory","at":69,"sn":9}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache.directory","at":74,"sn":10}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache.removeUnusedEntriesAfterDays","at":74,"sn":11}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":75,"sn":12}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":79,"sn":13}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache.removeUnusedEntriesAfterDays","at":79,"sn":14}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.configuration.AbstractBuildCache.enabled","at":79,"sn":15}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":80,"sn":16}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":81,"sn":17}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.configuration.AbstractBuildCache.enabled","at":81,"sn":18}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.caching.configuration.AbstractBuildCache.push","at":81,"sn":19}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":82,"sn":20}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":83,"sn":21}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.configuration.AbstractBuildCache.push","at":83,"sn":22}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache","at":83,"sn":23}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"build cache","at":88,"sn":24}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"listener subscriptions","at":88,"sn":25}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"listener subscriptions","at":89,"sn":26}
-2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"cleanup registrations","at":89,"sn":27}
-2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"cleanup registrations","at":90,"sn":28}
-2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"Gradle","at":95,"sn":29}
-2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"Work Graph","at":95,"sn":30}
-2020-08-15T09:43:52.961-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.execution.plan.LocalTaskNode","at":669,"sn":31}
-2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":":ok","at":669,"sn":32}
-2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":703,"sn":33}
-2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":706,"sn":34}
-2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2","at":708,"sn":35}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$name","at":747,"sn":36}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":748,"sn":37}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":752,"sn":38}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$name","at":752,"sn":39}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$type","at":752,"sn":40}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":753,"sn":41}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":758,"sn":42}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$type","at":758,"sn":43}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2","at":758,"sn":44}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":758,"sn":45}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":758,"sn":46}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":763,"sn":47}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.actions","at":763,"sn":48}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.util.ArrayList","at":764,"sn":49}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":767,"sn":50}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":826,"sn":51}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":827,"sn":52}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":844,"sn":53}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":844,"sn":54}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":844,"sn":55}
-2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":846,"sn":56}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":938,"sn":57}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1","at":940,"sn":58}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$description","at":979,"sn":59}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":980,"sn":60}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":991,"sn":61}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$description","at":991,"sn":62}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$value","at":991,"sn":63}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":992,"sn":64}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":1005,"sn":65}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$value","at":1005,"sn":66}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1","at":1005,"sn":67}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":1005,"sn":68}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":1005,"sn":69}
-2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":1007,"sn":70}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":1067,"sn":71}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Long","at":1068,"sn":72}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Long","at":1076,"sn":73}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":1076,"sn":74}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":1076,"sn":75}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":1076,"sn":76}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":1076,"sn":77}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":1078,"sn":78}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":1151,"sn":79}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal","at":1153,"sn":80}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":1179,"sn":81}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1180,"sn":82}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1184,"sn":83}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":1184,"sn":84}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal","at":1184,"sn":85}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":1184,"sn":86}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":1184,"sn":87}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":1184,"sn":88}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":1184,"sn":89}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":1184,"sn":90}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":1184,"sn":91}
-2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":1185,"sn":92}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.bcw","at":1771,"sn":93}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.bcw","at":1776,"sn":94}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.delegate","at":1776,"sn":95}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.delegate","at":1781,"sn":96}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.directive","at":1781,"sn":97}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1782,"sn":98}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1786,"sn":99}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.directive","at":1786,"sn":100}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":1786,"sn":101}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1787,"sn":102}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1791,"sn":103}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":1791,"sn":104}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.owner","at":1791,"sn":105}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.owner","at":1796,"sn":106}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.parameterTypes","at":1796,"sn":107}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Class[]","at":1797,"sn":108}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Class","at":1817,"sn":109}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Class","at":1836,"sn":110}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Class[]","at":1836,"sn":111}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.parameterTypes","at":1836,"sn":112}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.resolveStrategy","at":1836,"sn":113}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1837,"sn":114}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1841,"sn":115}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.resolveStrategy","at":1841,"sn":116}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.thisObject","at":1841,"sn":117}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.thisObject","at":1846,"sn":118}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":1846,"sn":119}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":1846,"sn":120}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":1846,"sn":121}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.util.ArrayList","at":1846,"sn":122}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.actions","at":1846,"sn":123}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.enabled","at":1846,"sn":124}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":1847,"sn":125}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":1848,"sn":126}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.enabled","at":1848,"sn":127}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":1848,"sn":128}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.AndSpec","at":1850,"sn":129}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.CompositeSpec.specs","at":1883,"sn":130}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.Spec[]","at":1884,"sn":131}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8","at":1915,"sn":132}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":1958,"sn":133}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":1959,"sn":134}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":1960,"sn":135}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":1960,"sn":136}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8","at":1960,"sn":137}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.Spec[]","at":1960,"sn":138}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.CompositeSpec.specs","at":1960,"sn":139}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.AndSpec","at":1960,"sn":140}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":1960,"sn":141}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.timeout","at":1960,"sn":142}
-2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.provider.DefaultProperty","at":1961,"sn":143}
-2020-08-15T09:43:52.968-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.provider.DefaultProperty","at":1983,"sn":144}
-2020-08-15T09:43:52.968-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.timeout","at":1983,"sn":145}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":1988,"sn":146}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":":ok","at":1988,"sn":147}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.execution.plan.LocalTaskNode","at":1988,"sn":148}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.execution.plan.LocalTaskNode","at":2010,"sn":149}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":":sub:ok","at":2010,"sn":150}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":2019,"sn":151}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":2022,"sn":152}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2","at":2024,"sn":153}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$name","at":2027,"sn":154}
-2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":2028,"sn":155}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":2036,"sn":156}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$name","at":2036,"sn":157}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$type","at":2036,"sn":158}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":2037,"sn":159}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":2042,"sn":160}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$type","at":2042,"sn":161}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2","at":2042,"sn":162}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":2042,"sn":163}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":2042,"sn":164}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":2047,"sn":165}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.actions","at":2047,"sn":166}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.util.ArrayList","at":2048,"sn":167}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":2051,"sn":168}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":2054,"sn":169}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":2055,"sn":170}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":2072,"sn":171}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":2072,"sn":172}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":2072,"sn":173}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":2074,"sn":174}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":2077,"sn":175}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1","at":2079,"sn":176}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$description","at":2082,"sn":177}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":2083,"sn":178}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":2094,"sn":179}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$description","at":2094,"sn":180}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$value","at":2094,"sn":181}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.String","at":2095,"sn":182}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.String","at":2108,"sn":183}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$value","at":2108,"sn":184}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1","at":2108,"sn":185}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":2108,"sn":186}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":2108,"sn":187}
-2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":2110,"sn":188}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":2113,"sn":189}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Long","at":2114,"sn":190}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Long","at":2122,"sn":191}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":2122,"sn":192}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":2122,"sn":193}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":2122,"sn":194}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":2122,"sn":195}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":2124,"sn":196}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":2127,"sn":197}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal","at":2129,"sn":198}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":2132,"sn":199}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2133,"sn":200}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2137,"sn":201}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":2137,"sn":202}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal","at":2137,"sn":203}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":2137,"sn":204}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":2137,"sn":205}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":2137,"sn":206}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":2137,"sn":207}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":2137,"sn":208}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":2137,"sn":209}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":2138,"sn":210}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.bcw","at":2141,"sn":211}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.bcw","at":2146,"sn":212}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.delegate","at":2146,"sn":213}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.delegate","at":2151,"sn":214}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.directive","at":2151,"sn":215}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2152,"sn":216}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2156,"sn":217}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.directive","at":2156,"sn":218}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":2156,"sn":219}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2157,"sn":220}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2161,"sn":221}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":2161,"sn":222}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.owner","at":2161,"sn":223}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.owner","at":2166,"sn":224}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.parameterTypes","at":2166,"sn":225}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Class[]","at":2167,"sn":226}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Class","at":2170,"sn":227}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Class","at":2171,"sn":228}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Class[]","at":2171,"sn":229}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.parameterTypes","at":2171,"sn":230}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.resolveStrategy","at":2171,"sn":231}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2172,"sn":232}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2176,"sn":233}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.resolveStrategy","at":2176,"sn":234}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"groovy.lang.Closure.thisObject","at":2176,"sn":235}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"groovy.lang.Closure.thisObject","at":2181,"sn":236}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":2181,"sn":237}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":2181,"sn":238}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":2181,"sn":239}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.util.ArrayList","at":2181,"sn":240}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.actions","at":2181,"sn":241}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.enabled","at":2181,"sn":242}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":2182,"sn":243}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":2183,"sn":244}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.enabled","at":2183,"sn":245}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":2183,"sn":246}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.AndSpec","at":2185,"sn":247}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.CompositeSpec.specs","at":2188,"sn":248}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.specs.Spec[]","at":2189,"sn":249}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8","at":2193,"sn":250}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":2196,"sn":251}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":2197,"sn":252}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":2198,"sn":253}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":2198,"sn":254}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8","at":2198,"sn":255}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.Spec[]","at":2198,"sn":256}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.CompositeSpec.specs","at":2198,"sn":257}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.specs.AndSpec","at":2198,"sn":258}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":2198,"sn":259}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.timeout","at":2198,"sn":260}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"O","frame":"org.gradle.api.internal.provider.DefaultProperty","at":2199,"sn":261}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.provider.DefaultProperty","at":2201,"sn":262}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.timeout","at":2201,"sn":263}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":2206,"sn":264}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":":sub:ok","at":2206,"sn":265}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"org.gradle.execution.plan.LocalTaskNode","at":2206,"sn":266}
-2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.instantexecution.DefaultInstantExecution] {"profile":"state","type":"C","frame":"Work Graph","at":2227,"sn":267}
-2020-08-15T09:43:53.005-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Store instant execution state'
-2020-08-15T09:43:53.005-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Store instant execution state' completed
+2020-08-15T09:43:52.945-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Store configuration cache state' started
+2020-08-15T09:43:52.953-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"Gradle","at":0,"sn":0}
+2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"included builds","at":6,"sn":1}
+2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"included builds","at":8,"sn":2}
+2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"build cache","at":8,"sn":3}
+2020-08-15T09:43:52.954-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache","at":10,"sn":4}
+2020-08-15T09:43:52.955-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_dn_","at":59,"sn":5}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_dn_","at":64,"sn":6}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_owner_","at":64,"sn":7}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache_Decorated._gr_owner_","at":69,"sn":8}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache.directory","at":69,"sn":9}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache.directory","at":74,"sn":10}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.local.DirectoryBuildCache.removeUnusedEntriesAfterDays","at":74,"sn":11}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":75,"sn":12}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":79,"sn":13}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache.removeUnusedEntriesAfterDays","at":79,"sn":14}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.configuration.AbstractBuildCache.enabled","at":79,"sn":15}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":80,"sn":16}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":81,"sn":17}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.configuration.AbstractBuildCache.enabled","at":81,"sn":18}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.caching.configuration.AbstractBuildCache.push","at":81,"sn":19}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":82,"sn":20}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":83,"sn":21}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.configuration.AbstractBuildCache.push","at":83,"sn":22}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.caching.local.DirectoryBuildCache","at":83,"sn":23}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"build cache","at":88,"sn":24}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"listener subscriptions","at":88,"sn":25}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"listener subscriptions","at":89,"sn":26}
+2020-08-15T09:43:52.956-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"cleanup registrations","at":89,"sn":27}
+2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"cleanup registrations","at":90,"sn":28}
+2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"Gradle","at":95,"sn":29}
+2020-08-15T09:43:52.957-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"Work Graph","at":95,"sn":30}
+2020-08-15T09:43:52.961-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.execution.plan.LocalTaskNode","at":669,"sn":31}
+2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":":ok","at":669,"sn":32}
+2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":703,"sn":33}
+2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":706,"sn":34}
+2020-08-15T09:43:52.962-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2","at":708,"sn":35}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$name","at":747,"sn":36}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":748,"sn":37}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":752,"sn":38}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$name","at":752,"sn":39}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$type","at":752,"sn":40}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":753,"sn":41}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":758,"sn":42}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$type","at":758,"sn":43}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2","at":758,"sn":44}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":758,"sn":45}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":758,"sn":46}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":763,"sn":47}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.actions","at":763,"sn":48}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.util.ArrayList","at":764,"sn":49}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":767,"sn":50}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":826,"sn":51}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":827,"sn":52}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":844,"sn":53}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":844,"sn":54}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":844,"sn":55}
+2020-08-15T09:43:52.963-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":846,"sn":56}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":938,"sn":57}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1","at":940,"sn":58}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$description","at":979,"sn":59}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":980,"sn":60}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":991,"sn":61}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$description","at":991,"sn":62}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$value","at":991,"sn":63}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":992,"sn":64}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":1005,"sn":65}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$value","at":1005,"sn":66}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1","at":1005,"sn":67}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":1005,"sn":68}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":1005,"sn":69}
+2020-08-15T09:43:52.964-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":1007,"sn":70}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":1067,"sn":71}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Long","at":1068,"sn":72}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Long","at":1076,"sn":73}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":1076,"sn":74}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":1076,"sn":75}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":1076,"sn":76}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":1076,"sn":77}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":1078,"sn":78}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":1151,"sn":79}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal","at":1153,"sn":80}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":1179,"sn":81}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1180,"sn":82}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1184,"sn":83}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":1184,"sn":84}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal","at":1184,"sn":85}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":1184,"sn":86}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":1184,"sn":87}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":1184,"sn":88}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":1184,"sn":89}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":1184,"sn":90}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":1184,"sn":91}
+2020-08-15T09:43:52.965-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":1185,"sn":92}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.bcw","at":1771,"sn":93}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.bcw","at":1776,"sn":94}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.delegate","at":1776,"sn":95}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.delegate","at":1781,"sn":96}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.directive","at":1781,"sn":97}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1782,"sn":98}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1786,"sn":99}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.directive","at":1786,"sn":100}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":1786,"sn":101}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1787,"sn":102}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1791,"sn":103}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":1791,"sn":104}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.owner","at":1791,"sn":105}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.owner","at":1796,"sn":106}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.parameterTypes","at":1796,"sn":107}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Class[]","at":1797,"sn":108}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Class","at":1817,"sn":109}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Class","at":1836,"sn":110}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Class[]","at":1836,"sn":111}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.parameterTypes","at":1836,"sn":112}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.resolveStrategy","at":1836,"sn":113}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":1837,"sn":114}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":1841,"sn":115}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.resolveStrategy","at":1841,"sn":116}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.thisObject","at":1841,"sn":117}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.thisObject","at":1846,"sn":118}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":1846,"sn":119}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":1846,"sn":120}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":1846,"sn":121}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.util.ArrayList","at":1846,"sn":122}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.actions","at":1846,"sn":123}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.enabled","at":1846,"sn":124}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":1847,"sn":125}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":1848,"sn":126}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.enabled","at":1848,"sn":127}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":1848,"sn":128}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.AndSpec","at":1850,"sn":129}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.CompositeSpec.specs","at":1883,"sn":130}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.Spec[]","at":1884,"sn":131}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8","at":1915,"sn":132}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":1958,"sn":133}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":1959,"sn":134}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":1960,"sn":135}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":1960,"sn":136}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8","at":1960,"sn":137}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.Spec[]","at":1960,"sn":138}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.CompositeSpec.specs","at":1960,"sn":139}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.AndSpec","at":1960,"sn":140}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":1960,"sn":141}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.timeout","at":1960,"sn":142}
+2020-08-15T09:43:52.966-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.provider.DefaultProperty","at":1961,"sn":143}
+2020-08-15T09:43:52.968-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.provider.DefaultProperty","at":1983,"sn":144}
+2020-08-15T09:43:52.968-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.timeout","at":1983,"sn":145}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":1988,"sn":146}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":":ok","at":1988,"sn":147}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.execution.plan.LocalTaskNode","at":1988,"sn":148}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.execution.plan.LocalTaskNode","at":2010,"sn":149}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":":sub:ok","at":2010,"sn":150}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":2019,"sn":151}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":2022,"sn":152}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2","at":2024,"sn":153}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$name","at":2027,"sn":154}
+2020-08-15T09:43:52.971-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":2028,"sn":155}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":2036,"sn":156}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$name","at":2036,"sn":157}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$2.val$type","at":2036,"sn":158}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":2037,"sn":159}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":2042,"sn":160}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2.val$type","at":2042,"sn":161}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$2","at":2042,"sn":162}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_dn_","at":2042,"sn":163}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":2042,"sn":164}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask_Decorated._gr_owner_","at":2047,"sn":165}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.actions","at":2047,"sn":166}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.util.ArrayList","at":2048,"sn":167}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":2051,"sn":168}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":2054,"sn":169}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":2055,"sn":170}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":2072,"sn":171}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.actionName","at":2072,"sn":172}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":2072,"sn":173}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":2074,"sn":174}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":2077,"sn":175}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1","at":2079,"sn":176}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$description","at":2082,"sn":177}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":2083,"sn":178}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":2094,"sn":179}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$description","at":2094,"sn":180}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.internal.Describables$1.val$value","at":2094,"sn":181}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.String","at":2095,"sn":182}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.String","at":2108,"sn":183}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1.val$value","at":2108,"sn":184}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.internal.Describables$1","at":2108,"sn":185}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.displayName","at":2108,"sn":186}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":2108,"sn":187}
+2020-08-15T09:43:53.001-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":2110,"sn":188}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":2113,"sn":189}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Long","at":2114,"sn":190}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Long","at":2122,"sn":191}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId.id","at":2122,"sn":192}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.UserCodeApplicationId","at":2122,"sn":193}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.id","at":2122,"sn":194}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":2122,"sn":195}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":2124,"sn":196}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":2127,"sn":197}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal","at":2129,"sn":198}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":2132,"sn":199}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2133,"sn":200}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2137,"sn":201}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal.threadLocalHashCode","at":2137,"sn":202}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.ThreadLocal","at":2137,"sn":203}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext.currentApplication","at":2137,"sn":204}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext","at":2137,"sn":205}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.this$0","at":2137,"sn":206}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication","at":2137,"sn":207}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.application","at":2137,"sn":208}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":2137,"sn":209}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":2138,"sn":210}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.bcw","at":2141,"sn":211}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.bcw","at":2146,"sn":212}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.delegate","at":2146,"sn":213}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.delegate","at":2151,"sn":214}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.directive","at":2151,"sn":215}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2152,"sn":216}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2156,"sn":217}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.directive","at":2156,"sn":218}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":2156,"sn":219}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2157,"sn":220}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2161,"sn":221}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.maximumNumberOfParameters","at":2161,"sn":222}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.owner","at":2161,"sn":223}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.owner","at":2166,"sn":224}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.parameterTypes","at":2166,"sn":225}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Class[]","at":2167,"sn":226}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Class","at":2170,"sn":227}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Class","at":2171,"sn":228}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Class[]","at":2171,"sn":229}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.parameterTypes","at":2171,"sn":230}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.resolveStrategy","at":2171,"sn":231}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Integer","at":2172,"sn":232}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Integer","at":2176,"sn":233}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.resolveStrategy","at":2176,"sn":234}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"groovy.lang.Closure.thisObject","at":2176,"sn":235}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"groovy.lang.Closure.thisObject","at":2181,"sn":236}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"build_exkq6qzuau806my23tc1b64nl$_run_closure1$_closure2$_closure3","at":2181,"sn":237}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction.closure","at":2181,"sn":238}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$ClosureTaskAction","at":2181,"sn":239}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.util.ArrayList","at":2181,"sn":240}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.actions","at":2181,"sn":241}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.enabled","at":2181,"sn":242}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"java.lang.Boolean","at":2182,"sn":243}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"java.lang.Boolean","at":2183,"sn":244}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.enabled","at":2183,"sn":245}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":2183,"sn":246}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.AndSpec","at":2185,"sn":247}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.CompositeSpec.specs","at":2188,"sn":248}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.specs.Spec[]","at":2189,"sn":249}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8","at":2193,"sn":250}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":2196,"sn":251}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.DefaultTask","at":2197,"sn":252}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":2198,"sn":253}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8.this$0","at":2198,"sn":254}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask$8","at":2198,"sn":255}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.Spec[]","at":2198,"sn":256}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.CompositeSpec.specs","at":2198,"sn":257}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.specs.AndSpec","at":2198,"sn":258}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.onlyIfSpec","at":2198,"sn":259}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.AbstractTask.timeout","at":2198,"sn":260}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"org.gradle.api.internal.provider.DefaultProperty","at":2199,"sn":261}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.provider.DefaultProperty","at":2201,"sn":262}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.internal.AbstractTask.timeout","at":2201,"sn":263}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.api.DefaultTask","at":2206,"sn":264}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":":sub:ok","at":2206,"sn":265}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"org.gradle.execution.plan.LocalTaskNode","at":2206,"sn":266}
+2020-08-15T09:43:53.002-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"C","frame":"Work Graph","at":2227,"sn":267}
+2020-08-15T09:43:53.005-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Store configuration cache state'
+2020-08-15T09:43:53.005-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Store configuration cache state' completed
 2020-08-15T09:43:53.006-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Run tasks' started
 2020-08-15T09:43:53.008-0300 [DEBUG] [org.gradle.execution.plan.DefaultPlanExecutor] Using 8 parallel executor threads
 2020-08-15T09:43:53.013-0300 [DEBUG] [org.gradle.internal.resources.AbstractTrackedResourceLock] Execution worker for ':' Thread 7: acquired lock on :
@@ -749,7 +749,7 @@
 2020-08-15T09:43:53.119-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Build finished for file system watching' completed
 2020-08-15T09:43:53.119-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Run build'
 2020-08-15T09:43:53.119-0300 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Run build' completed
-2020-08-15T09:43:53.121-0300 [WARN] [org.gradle.instantexecution.problems.InstantExecutionProblems] Configuration cache entry stored.
+2020-08-15T09:43:53.121-0300 [WARN] [org.gradle.configurationcache.problems.ConfigurationCacheProblems] Configuration cache entry stored.
 2020-08-15T09:43:53.125-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for cache directory md-supplier (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/md-supplier)
 2020-08-15T09:43:53.126-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on cache directory md-supplier (/work/speedscope/intTestHomeDir/distributions-jvm/caches/6.7-20200815030000+0000/md-supplier).
 2020-08-15T09:43:53.127-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for execution history cache (/work/speedscope/subprojects/instant-execution/build/tmp/test files/InstantExec.Test/logs_catego.iles/qd400/.gradle/6.7-20200815030000+0000/executionHistory)

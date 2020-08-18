@@ -4,27 +4,27 @@
   "activeProfileIndex": 1,
   "shared": {
     "frames": [{
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InitScripts.fingerprints"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InitScripts.fingerprints"
     }, {
       "name": "java.util.ArrayList"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.gradleUserHomeDir"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.gradleUserHomeDir"
     }, {
       "name": "java.io.File"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$GradleEnvironment.jvm"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$GradleEnvironment.jvm"
     }, {
       "name": "java.lang.String"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.file"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.file"
     }, {
-      "name": "org.gradle.instantexecution.fingerprint.InstantExecutionCacheFingerprint$InputFile.hash"
+      "name": "org.gradle.configurationcache.fingerprint.ConfigurationCacheFingerprint$InputFile.hash"
     }, {
       "name": "org.gradle.internal.hash.HashCode"
     }, {
