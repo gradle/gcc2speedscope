@@ -1,5 +1,5 @@
 {
-  "exporter": "speedscope@0.6.0",
+  "exporter": "gcc2speedscope@0.1.0",
   "$schema": "https://www.speedscope.app/file-format-schema.json",
   "activeProfileIndex": 1,
   "shared": {
@@ -1385,5 +1385,6 @@
       "frame": 26,
       "at": 2227
     }]
-  }]
+  }],
+  "name": "Gradle Configuration Cache Space Usage"
 }

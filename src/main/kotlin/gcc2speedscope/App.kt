@@ -66,7 +66,7 @@ fun Writer.writeSpeedscopeDocumentFor(log: Log, prettyPrint: Boolean = false) {
 
 private
 fun speedscopeDocumentFor(log: Log) = mapOf<String, Any>(
-    "exporter" to "speedscope@0.6.0",
+    "exporter" to "gcc2speedscope@0.1.0",
     "${'$'}schema" to "https://www.speedscope.app/file-format-schema.json",
     "activeProfileIndex" to log.profiles
         .indexOfFirst { profile -> profile.name == "state" }
@@ -88,7 +88,8 @@ fun speedscopeDocumentFor(log: Log) = mapOf<String, Any>(
             "endValue" to endValue,
             "events" to events
         )
-    }
+    },
+    "name" to "Gradle Configuration Cache Space Usage"
 )
 
 
