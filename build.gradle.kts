@@ -27,5 +27,5 @@ tasks {
 }
 
 application {
-    mainClassName = "gcc2speedscope.AppKt"
+    mainClass.set("gcc2speedscope.AppKt")
 }
