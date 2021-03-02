@@ -171,5 +171,5 @@ fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequenc
 private
 fun logLinePattern(): Pattern {
     val logPrefix = "[DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache]"
-    return Pattern.compile("[0-9:T.\\-]+ ${Regex.escape(logPrefix)} (\\{.*?})")
+    return Pattern.compile("[0-9:T.\\-+]+ ${Regex.escape(logPrefix)} (\\{.*?})")
 }
