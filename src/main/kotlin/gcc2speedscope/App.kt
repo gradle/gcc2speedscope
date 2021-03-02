@@ -136,11 +136,6 @@ fun speedscopeLogFor(events: Sequence<Event>): Log {
 
 
 private
-val JsonObject.at: Long
-    get() = long("at")!!
-
-
-private
 fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequence<Event> {
     // Example log line:
     // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
