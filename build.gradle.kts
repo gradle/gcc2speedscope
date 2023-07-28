@@ -1,12 +1,12 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.7.10"
+    id("org.jetbrains.kotlin.jvm") version "1.9.0"
     application
 }
 
 version = "0.1.0"
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
