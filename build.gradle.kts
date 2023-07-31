@@ -3,14 +3,17 @@ plugins {
     application
 }
 
-version = "0.1.0"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("com.beust:klaxon:5.5")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.h2database:h2:2.2.220")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
