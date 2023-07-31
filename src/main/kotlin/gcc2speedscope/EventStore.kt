@@ -63,6 +63,9 @@ class EventStore(database: String) : AutoCloseable {
     private
     val insertEvent = prepare("INSERT INTO events (sn, profile_id, type, frame_id, at) VALUES (?, ?, ?, ?, ?)")
 
+    private
+    val selectProfileLastValue = prepare("SELECT at FROM events WHERE profile_id = ? ORDER BY sn DESC LIMIT 1")
+
     data class Profile(
         val id: Long,
         val name: String,
@@ -76,31 +79,20 @@ class EventStore(database: String) : AutoCloseable {
     )
 
     fun queryProfiles(): Sequence<Profile> = sequence {
-
-        val queryLastValue = prepare("SELECT at FROM events WHERE profile_id = ? ORDER BY sn DESC LIMIT 1")
-
         forEachIn("SELECT profile_id, profile FROM profiles") {
             val id = getLong(1)
-            val lastValue = queryLastValue.run {
-                setLong(1, id)
-                executeQuery().run {
-                    require(next())
-                    getLong(1)
-                }
-            }
-            yield(Profile(id, getString(2), lastValue))
+            val profile = getString(2)
+            val lastValue = lastValueOfProfile(id)
+            yield(Profile(id, profile, lastValue))
         }
     }
 
     fun eventsOf(p: Profile): Sequence<Event> = sequence {
         forEachIn("SELECT type, frame_id, at FROM events WHERE profile_id = ${p.id} ORDER BY sn ASC") {
-            yield(
-                Event(
-                    type = getString(1),
-                    frameIndex = getLong(2),
-                    at = getLong(3)
-                )
-            )
+            val type = getString(1)
+            val frameIndex = getLong(2)
+            val at = getLong(3)
+            yield(Event(type, frameIndex, at))
         }
     }
 
@@ -138,6 +130,16 @@ class EventStore(database: String) : AutoCloseable {
             execute()
         }
     }
+
+    private
+    fun lastValueOfProfile(profileId: Long): Long =
+        selectProfileLastValue.run {
+            setLong(1, profileId)
+            executeQuery().run {
+                require(next())
+                getLong(1)
+            }
+        }
 
     private
     fun insertProfileIfAbsent(profile: String) =
