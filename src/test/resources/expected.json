@@ -1,5 +1,5 @@
 {
-  "exporter": "gcc2speedscope@0.1.0",
+  "exporter": "gcc2speedscope@0.2.0",
   "$schema": "https://www.speedscope.app/file-format-schema.json",
   "activeProfileIndex": 0,
   "shared": {

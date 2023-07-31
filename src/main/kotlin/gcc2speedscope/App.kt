@@ -126,7 +126,7 @@ suspend fun writeJsonTo(
             setIndent("  ")
         }
         beginObject()
-        name("exporter").value("gcc2speedscope@0.1.0")
+        name("exporter").value("gcc2speedscope@0.2.0")
         name("${'$'}schema").value("https://www.speedscope.app/file-format-schema.json")
         name("activeProfileIndex").value(0)
 
