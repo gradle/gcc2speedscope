@@ -26,13 +26,14 @@ class AppTest {
     }
 
     private
-    fun writeSpeedscopeDocumentFor(debugLogReader: Reader, outputFile: Path, prettyPrint: Boolean = false) {
-        outputFile.toFile().bufferedWriter().use { writer ->
-            writeSpeedscopeDocumentTo(writer, debugLogReader, prettyPrint, "$outputFile.db")
-        }
-    }
-
-    private
     fun bufferedReaderForResource(resource: String) =
         javaClass.getResourceAsStream(resource)!!.bufferedReader()
+}
+
+
+internal
+fun writeSpeedscopeDocumentFor(debugLogReader: Reader, outputFile: Path, prettyPrint: Boolean = false) {
+    outputFile.toFile().bufferedWriter().use { writer ->
+        writeSpeedscopeDocumentTo(writer, debugLogReader, prettyPrint, "$outputFile.db")
+    }
 }
