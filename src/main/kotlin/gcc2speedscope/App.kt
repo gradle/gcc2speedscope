@@ -22,14 +22,15 @@ fun main(args: Array<String>) {
         exitProcess(1)
     }
 
-    val reader = when (val fileName = args[0]) {
+    val debugLogReader = when (val fileName = args[0]) {
         "--" -> System.`in`.bufferedReader()
         else -> newBufferedReader(Paths.get(fileName))
     }
 
     System.out.bufferedWriter().use { writer ->
         writeSpeedscopeDocumentTo(
-            writer, reader,
+            writer,
+            debugLogReader,
             prettyPrint = System.getenv("GCC2SS_PRETTY_PRINT") !== null,
             databaseFile = System.getenv("GCC2SS_DATABASE") ?: createTempDatabaseFile()
         )
@@ -49,7 +50,8 @@ fun writeSpeedscopeDocumentTo(
     databaseFile: String
 ): Unit = runBlocking {
 
-    val channelCapacity = System.getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt() ?: 1024
+    val channelCapacity = System.getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
+        ?: 1024
 
     // Launch `parser`
     val events = Channel<ParsedEvent>(channelCapacity)
