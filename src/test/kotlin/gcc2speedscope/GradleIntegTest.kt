@@ -19,11 +19,8 @@ import java.net.URL
 class GradleIntegTest {
 
     @ParameterizedTest
-    @ValueSource(strings = ["7.3", "8.2.1", "8.3-rc-2"])
+    @ValueSource(strings = ["7.3", "8.2.1", "8.3-rc-3"])
     fun `produces expected json from Gradle debug log`(gradleVersion: String, @TempDir tempDir: File) {
-
-        assumeFalse(gradleVersion == "8.3-rc-2", "$gradleVersion is broken")
-
         // given:
         val projectDir = tempDir.resolve("project")
         val debugLog = tempDir.resolve("debug.log")
