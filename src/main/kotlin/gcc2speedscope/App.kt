@@ -1,5 +1,6 @@
 package gcc2speedscope
 
+import com.google.gson.JsonObject
 import com.google.gson.JsonParseException
 import com.google.gson.JsonParser
 import com.google.gson.stream.JsonWriter
@@ -231,22 +232,32 @@ fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequenc
         if (matcher.matches()) {
             val jsonEvent = matcher.group(1)
             try {
-                val jsonObject = JsonParser.parseString(jsonEvent).asJsonObject
-                yield(jsonObject.run {
-                    ParsedEvent(
-                        sequenceNumber = get("sn")!!.asLong,
-                        profile = get("profile")!!.asString,
-                        type = get("type")!!.asString,
-                        frame = get("frame")!!.asString,
-                        at = get("at")!!.asLong
-                    )
-                })
+                val parsedEvent = JsonParser
+                    .parseString(jsonEvent)
+                    .asJsonObject.run {
+                        ParsedEvent(
+                            sequenceNumber = getLong("sn"),
+                            profile = getString("profile"),
+                            type = getString("type"),
+                            frame = getString("frame"),
+                            at = getLong("at")
+                        )
+                    }
+                yield(parsedEvent)
             } catch (e: JsonParseException) {
                 throw IllegalArgumentException("line ${index + 1}: failed to parse $jsonEvent", e)
             }
         }
     }
 }
+
+
+private
+fun JsonObject.getString(memberName: String): String = get(memberName)!!.asString
+
+
+private
+fun JsonObject.getLong(memberName: String) = get(memberName)!!.asLong
 
 
 private
