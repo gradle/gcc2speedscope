@@ -54,13 +54,21 @@ fun writeSpeedscopeDocumentTo(
     val channelCapacity = System.getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
         ?: 1024
 
+    val parsedEventFilter: ParsedEvent.() -> Boolean =
+        System.getenv("GCC2SS_INCLUDE")
+            ?.let(Pattern::compile)
+            ?.let { pattern -> { pattern.matcher(frame).matches() } }
+            ?: { true }
+
     // Launch `parser`
     val events = Channel<ParsedEvent>(channelCapacity)
     launch(Dispatchers.IO) {
         try {
             debugLogReader.useLines { lines ->
                 for (e in configurationCacheEventsFromDebugLogLines(lines)) {
-                    events.send(e)
+                    if (parsedEventFilter(e)) {
+                        events.send(e)
+                    }
                 }
             }
         } finally {
