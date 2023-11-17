@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.Reader
 import java.io.Writer
+import java.lang.System.getenv
 import java.nio.file.Files
 import java.nio.file.Files.newBufferedReader
 import java.nio.file.Paths
@@ -32,8 +33,9 @@ fun main(args: Array<String>) {
         writeSpeedscopeDocumentTo(
             writer,
             debugLogReader,
-            prettyPrint = System.getenv("GCC2SS_PRETTY_PRINT") !== null,
-            databaseFile = System.getenv("GCC2SS_DATABASE") ?: createTempDatabaseFile()
+            prettyPrint = getenv("GCC2SS_PRETTY_PRINT") !== null,
+            databaseFile = getenv("GCC2SS_DATABASE")
+                ?: createTempDatabaseFile()
         )
     }
 }
@@ -51,11 +53,11 @@ fun writeSpeedscopeDocumentTo(
     databaseFile: String
 ): Unit = runBlocking {
 
-    val channelCapacity = System.getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
+    val channelCapacity = getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
         ?: 1024
 
     val parsedEventFilter: ParsedEvent.() -> Boolean =
-        System.getenv("GCC2SS_INCLUDE")
+        getenv("GCC2SS_INCLUDE")
             ?.let(Pattern::compile)
             ?.let { pattern -> { pattern.matcher(frame).matches() } }
             ?: { true }
