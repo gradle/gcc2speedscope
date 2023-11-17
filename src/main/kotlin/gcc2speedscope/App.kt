@@ -1,5 +1,6 @@
 package gcc2speedscope
 
+import com.google.gson.JsonObject
 import com.google.gson.JsonParseException
 import com.google.gson.JsonParser
 import com.google.gson.stream.JsonWriter
@@ -9,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.Reader
 import java.io.Writer
+import java.lang.System.getenv
 import java.nio.file.Files
 import java.nio.file.Files.newBufferedReader
 import java.nio.file.Paths
@@ -31,8 +33,9 @@ fun main(args: Array<String>) {
         writeSpeedscopeDocumentTo(
             writer,
             debugLogReader,
-            prettyPrint = System.getenv("GCC2SS_PRETTY_PRINT") !== null,
-            databaseFile = System.getenv("GCC2SS_DATABASE") ?: createTempDatabaseFile()
+            prettyPrint = getenv("GCC2SS_PRETTY_PRINT") !== null,
+            databaseFile = getenv("GCC2SS_DATABASE")
+                ?: createTempDatabaseFile()
         )
     }
 }
@@ -50,8 +53,14 @@ fun writeSpeedscopeDocumentTo(
     databaseFile: String
 ): Unit = runBlocking {
 
-    val channelCapacity = System.getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
+    val channelCapacity = getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
         ?: 1024
+
+    val parsedEventFilter: ParsedEvent.() -> Boolean =
+        getenv("GCC2SS_INCLUDE")
+            ?.let(Pattern::compile)
+            ?.let { pattern -> { pattern.matcher(frame).matches() } }
+            ?: { true }
 
     // Launch `parser`
     val events = Channel<ParsedEvent>(channelCapacity)
@@ -59,7 +68,9 @@ fun writeSpeedscopeDocumentTo(
         try {
             debugLogReader.useLines { lines ->
                 for (e in configurationCacheEventsFromDebugLogLines(lines)) {
-                    events.send(e)
+                    if (parsedEventFilter(e)) {
+                        events.send(e)
+                    }
                 }
             }
         } finally {
@@ -231,22 +242,32 @@ fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequenc
         if (matcher.matches()) {
             val jsonEvent = matcher.group(1)
             try {
-                val jsonObject = JsonParser.parseString(jsonEvent).asJsonObject
-                yield(jsonObject.run {
-                    ParsedEvent(
-                        sequenceNumber = get("sn")!!.asLong,
-                        profile = get("profile")!!.asString,
-                        type = get("type")!!.asString,
-                        frame = get("frame")!!.asString,
-                        at = get("at")!!.asLong
-                    )
-                })
+                val parsedEvent = JsonParser
+                    .parseString(jsonEvent)
+                    .asJsonObject.run {
+                        ParsedEvent(
+                            sequenceNumber = getLong("sn"),
+                            profile = getString("profile"),
+                            type = getString("type"),
+                            frame = getString("frame"),
+                            at = getLong("at")
+                        )
+                    }
+                yield(parsedEvent)
             } catch (e: JsonParseException) {
                 throw IllegalArgumentException("line ${index + 1}: failed to parse $jsonEvent", e)
             }
         }
     }
 }
+
+
+private
+fun JsonObject.getString(memberName: String): String = get(memberName)!!.asString
+
+
+private
+fun JsonObject.getLong(memberName: String) = get(memberName)!!.asLong
 
 
 private
