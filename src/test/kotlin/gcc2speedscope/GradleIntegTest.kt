@@ -19,7 +19,7 @@ import java.net.URL
 class GradleIntegTest {
 
     @ParameterizedTest
-    @ValueSource(strings = ["7.3", "8.2.1", "8.8", "8.9"])
+    @ValueSource(strings = ["7.3", "8.2.1", "8.8", "8.9", "8.10-20240723224155+0000"])
     fun `produces expected json from Gradle debug log`(gradleVersion: String, @TempDir tempDir: File) {
         // given:
         val projectDir = tempDir.resolve("project")
