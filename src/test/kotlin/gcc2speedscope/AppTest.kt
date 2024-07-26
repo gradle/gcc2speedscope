@@ -2,9 +2,11 @@ package gcc2speedscope
 
 import org.junit.jupiter.api.io.TempDir
 import java.io.Reader
+import java.io.StringReader
 import java.nio.file.Path
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFails
 
 class AppTest {
 
@@ -23,6 +25,21 @@ class AppTest {
             bufferedReaderForResource("/expected.json").readText(),
             outputFile.toFile().readText()
         )
+    }
+
+    @Test
+    fun `reports when no parseable data is found`(@TempDir tempDir: Path)  {
+        val outputFile = tempDir.resolve("actual.json")
+        assertFails("Could not recognize a single line from input") {
+            val invalidInput = """
+            No parseable data in this file
+            """
+            writeSpeedscopeDocumentFor(
+                StringReader(invalidInput),
+                outputFile,
+                prettyPrint = true
+            )
+        }
     }
 
     private
