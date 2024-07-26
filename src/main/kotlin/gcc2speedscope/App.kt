@@ -66,11 +66,16 @@ fun writeSpeedscopeDocumentTo(
     val events = Channel<ParsedEvent>(channelCapacity)
     launch(Dispatchers.IO) {
         try {
+            var processed = 0
             debugLogReader.useLines { lines ->
                 for (e in configurationCacheEventsFromDebugLogLines(lines)) {
                     if (parsedEventFilter(e)) {
                         events.send(e)
+                        processed++
                     }
+                }
+                require(processed > 0) {
+                    "Could not recognize a single line from input"
                 }
             }
         } finally {
@@ -235,7 +240,7 @@ data class ParsedEvent(
 private
 fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequence {
     // Example log line:
-    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
+    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache...] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
     val linePattern = logLinePattern()
     lines.forEachIndexed { index, line ->
         val matcher = linePattern.matcher(line)
@@ -272,6 +277,5 @@ fun JsonObject.getLong(memberName: String) = get(memberName)!!.asLong
 
 private
 fun logLinePattern(): Pattern {
-    val logPrefix = "[DEBUG] [org.gradle.configurationcache.DefaultConfigurationCache]"
-    return Pattern.compile("[0-9:T.\\-+]+ ${Regex.escape(logPrefix)} (\\{.*?})")
+    return Pattern.compile("[0-9:T.\\-+]+ \\[DEBUG\\] \\[org\\.gradle\\.configurationcache.*\\] (\\{.*?})")
 }
