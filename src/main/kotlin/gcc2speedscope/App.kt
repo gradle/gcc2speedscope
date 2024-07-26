@@ -277,5 +277,5 @@ fun JsonObject.getLong(memberName: String) = get(memberName)!!.asLong
 
 private
 fun logLinePattern(): Pattern {
-    return Pattern.compile("[0-9:T.\\-+]+ \\[DEBUG\\] \\[org\\.gradle\\.configurationcache.*\\] (\\{.*?})")
+    return Pattern.compile("[0-9:T.\\-+]+ \\[DEBUG\\] \\[org\\.gradle\\.configurationcache(?:\\.DefaultConfigurationCache)?\\] (\\{.*?})")
 }
