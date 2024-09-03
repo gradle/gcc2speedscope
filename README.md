@@ -24,7 +24,7 @@ Produce a speedscope document from a Gradle debug log file:
 
 Produce a speedscope document from a Gradle build:
 
-    $ ./gradlew assemble --configuration-cache -d | gcc2ss -- >> speedscope.json
+    $ ./gradlew assemble --dry-run --configuration-cache -d | gcc2ss -- >> speedscope.json
 
 ### Dealing with information overload
 
