@@ -8,15 +8,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import java.io.File
 import java.io.Reader
 import java.io.Writer
 import java.lang.System.getenv
 import java.nio.file.Files
 import java.nio.file.Files.newBufferedReader
+import java.nio.file.Path
 import java.nio.file.Paths
 import java.util.regex.Pattern
 import kotlin.system.exitProcess
 
+
+val DEFAULT_EVENT_FILTER: ParsedEvent.() -> Boolean = { true }
+val DEFAULT_CHANNEL_CAPACITY = 1024
 
 fun main(args: Array<String>) {
     if (args.size != 1) {
@@ -24,26 +29,50 @@ fun main(args: Array<String>) {
         exitProcess(1)
     }
 
-    val debugLogReader = when (val fileName = args[0]) {
+    val debugLogFileName = args[0]
+
+    processDebugLog(debugLogFileName)
+}
+
+private fun processDebugLog(debugLogFileName: String) {
+    val debugLogReader = when (debugLogFileName) {
         "--" -> System.`in`.bufferedReader()
-        else -> newBufferedReader(Paths.get(fileName))
+        else -> newBufferedReader(Paths.get(debugLogFileName))
     }
 
-    System.out.bufferedWriter().use { writer ->
-        writeSpeedscopeDocumentTo(
-            writer,
-            debugLogReader,
+    val databaseDir = getenv("GCC2SS_DATA_DIR")?.let(::File)?.toPath() ?: Files.createTempDirectory("gcc2speedscope")
+
+    val eventDatabaseFile = getenv("GCC2SS_DATABASE")?.let(Paths::get)
+        ?: databaseDir.resolve("events.db")
+
+    val channelCapacity = getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
+
+    val parsedEventFilter: (ParsedEvent.() -> Boolean)? =
+        getenv("GCC2SS_INCLUDE")
+            ?.let(Pattern::compile)
+            ?.let { pattern -> { pattern.matcher(frame).matches() } }
+
+    processDebugLog(
+        Options(
+            debugLogReader = debugLogReader,
+            speedscopeWriter = System.out.bufferedWriter(),
             prettyPrint = getenv("GCC2SS_PRETTY_PRINT") !== null,
-            databaseFile = getenv("GCC2SS_DATABASE")
-                ?: createTempDatabaseFile()
+            eventDatabaseFile = eventDatabaseFile,
+            eventFilter = parsedEventFilter ?: DEFAULT_EVENT_FILTER,
+            channelCapacity = channelCapacity ?: DEFAULT_CHANNEL_CAPACITY
         )
-    }
+    )
 }
 
 
-private
-fun createTempDatabaseFile() =
-    Files.createTempFile("gcc2speedscope", "db").toString()
+data class Options(
+    val debugLogReader: Reader,
+    val speedscopeWriter: Writer,
+    val prettyPrint: Boolean,
+    val eventDatabaseFile: Path,
+    val eventFilter: (ParsedEvent.() -> Boolean),
+    val channelCapacity: Int
+)
 
 
 fun writeSpeedscopeDocumentTo(
@@ -51,25 +80,29 @@ fun writeSpeedscopeDocumentTo(
     debugLogReader: Reader,
     prettyPrint: Boolean,
     databaseFile: String
+): Unit =
+    processDebugLog(Options(
+        debugLogReader = debugLogReader,
+        speedscopeWriter = writer,
+        prettyPrint = prettyPrint,
+        eventDatabaseFile = Paths.get(databaseFile),
+        eventFilter = DEFAULT_EVENT_FILTER,
+        channelCapacity = DEFAULT_CHANNEL_CAPACITY
+    ))
+
+
+fun processDebugLog(
+    options: Options
 ): Unit = runBlocking {
 
-    val channelCapacity = getenv("GCC2SS_CHANNEL_CAPACITY")?.toInt()
-        ?: 1024
-
-    val parsedEventFilter: ParsedEvent.() -> Boolean =
-        getenv("GCC2SS_INCLUDE")
-            ?.let(Pattern::compile)
-            ?.let { pattern -> { pattern.matcher(frame).matches() } }
-            ?: { true }
-
     // Launch `parser`
-    val events = Channel<ParsedEvent>(channelCapacity)
+    val events = Channel<ParsedEvent>(options.channelCapacity)
     launch(Dispatchers.IO) {
         try {
             var processed = 0
-            debugLogReader.useLines { lines ->
+            options.debugLogReader.useLines { lines ->
                 for (e in configurationCacheEventsFromDebugLogLines(lines)) {
-                    if (parsedEventFilter(e)) {
+                    if (options.eventFilter(e)) {
                         events.send(e)
                         processed++
                     }
@@ -84,10 +117,10 @@ fun writeSpeedscopeDocumentTo(
     }
 
     // Launch `aggregator`
-    val aggregates = Channel<Aggregate>(channelCapacity)
+    val aggregates = Channel<Aggregate>(options.channelCapacity)
     launch(Dispatchers.IO) {
         try {
-            aggregateEvents(events, aggregates, databaseFile)
+            aggregateEvents(events, aggregates, options.eventDatabaseFile)
         } finally {
             aggregates.close()
         }
@@ -95,7 +128,8 @@ fun writeSpeedscopeDocumentTo(
 
     // Launch `writer`
     launch(Dispatchers.IO) {
-        writeJsonTo(writer, aggregates, prettyPrint)
+        writeJsonTo(options.speedscopeWriter, aggregates, options.prettyPrint)
+        options.speedscopeWriter.flush()
     }
 }
 
@@ -104,7 +138,7 @@ private
 suspend fun aggregateEvents(
     events: Channel<ParsedEvent>,
     aggregates: Channel<Aggregate>,
-    databaseFile: String
+    databaseFile: Path
 ) {
     EventStore(databaseFile).use { eventStore ->
 

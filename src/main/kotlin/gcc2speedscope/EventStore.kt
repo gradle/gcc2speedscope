@@ -1,6 +1,8 @@
 package gcc2speedscope
 
-class EventStore(database: String) : DataStore(database) {
+import java.nio.file.Path
+
+class EventStore(database: Path) : DataStore(database) {
 
     init {
         createStatement().execute(

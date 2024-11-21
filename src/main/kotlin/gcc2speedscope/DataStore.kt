@@ -1,11 +1,12 @@
 package gcc2speedscope
 
+import java.nio.file.Path
 import java.sql.DriverManager
 import java.sql.PreparedStatement
 import java.sql.ResultSet
 import java.sql.Statement
 
-abstract class DataStore(database: String): AutoCloseable {
+abstract class DataStore(database: Path): AutoCloseable {
     private
     val conn = DriverManager.getConnection("jdbc:h2:$database", "sa", "")
 
