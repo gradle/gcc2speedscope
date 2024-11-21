@@ -1,15 +1,6 @@
 package gcc2speedscope
 
-import java.sql.DriverManager
-import java.sql.PreparedStatement
-import java.sql.ResultSet
-import java.sql.Statement
-
-
-class EventStore(database: String) : AutoCloseable {
-
-    private
-    val conn = DriverManager.getConnection("jdbc:h2:$database", "sa", "")
+class EventStore(database: String) : DataStore(database) {
 
     init {
         createStatement().execute(
@@ -114,10 +105,6 @@ class EventStore(database: String) : AutoCloseable {
         }
     }
 
-    override fun close() {
-        conn.close()
-    }
-
     private
     fun store(e: ParsedEvent, frameIndex: Long) {
         val profileId = insertProfileIfAbsent(e.profile)
@@ -154,49 +141,4 @@ class EventStore(database: String) : AutoCloseable {
     fun insertFrame(frameName: String): Long =
         insertFrame.insertAndGetGeneratedKey(frameName)
 
-    private
-    fun PreparedStatement.insertAndGetGeneratedKey(stringParam: String): Long = run {
-        setString(1, stringParam)
-        executeUpdate()
-        generatedKeys.use { rs ->
-            rs.firstLong()!!
-        }
-    }
-
-    private
-    fun PreparedStatement.queryLong(stringParam: String): Long? = run {
-        setString(1, stringParam)
-        executeQuery().use { rs ->
-            rs.firstLong()
-        }
-    }
-
-    private
-    fun ResultSet.firstLong() =
-        takeIf { it.next() }?.getLong(1)
-
-    private
-    inline fun forEachIn(query: String, action: ResultSet.() -> Unit) {
-        resultSet(query).use { rs ->
-            while (rs.next()) {
-                action(rs)
-            }
-        }
-    }
-
-    private
-    fun resultSet(query: String): ResultSet =
-        createStatement().executeQuery(query)
-
-    private
-    fun createStatement(): Statement =
-        conn.createStatement()
-
-    private
-    fun prepareInsert(sql: String): PreparedStatement =
-        conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
-
-    private
-    fun prepare(sql: String): PreparedStatement =
-        conn.prepareStatement(sql)
 }
