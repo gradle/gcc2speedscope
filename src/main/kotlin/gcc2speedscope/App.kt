@@ -6,6 +6,7 @@ import com.google.gson.JsonParser
 import com.google.gson.stream.JsonWriter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.File
@@ -16,6 +17,7 @@ import java.nio.file.Files
 import java.nio.file.Files.newBufferedReader
 import java.nio.file.Path
 import java.nio.file.Paths
+import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.system.exitProcess
 
@@ -95,34 +97,35 @@ fun processDebugLog(
     options: Options
 ): Unit = runBlocking {
 
-    // Launch `parser`
-    val events = Channel<ParsedEvent>(options.channelCapacity)
-    launch(Dispatchers.IO) {
-        try {
-            var processed = 0
-            options.debugLogReader.useLines { lines ->
-                for (e in configurationCacheEventsFromDebugLogLines(lines)) {
-                    if (options.eventFilter(e)) {
-                        events.send(e)
-                        processed++
-                    }
-                }
-                require(processed > 0) {
-                    "Could not recognize a single line from input"
-                }
-            }
-        } finally {
-            events.close()
+    val mutableSharedFlow = MutableSharedFlow<String?>(replay = Int.MAX_VALUE)
+    options.debugLogReader.useLines { lines ->
+        lines.forEach { line ->
+            mutableSharedFlow.emit(line)
         }
+        mutableSharedFlow.emit(null)
     }
+    val linesFlow = mutableSharedFlow
+    val linePattern = logLinePattern()
+    val matchesFlow = linesFlow.map { it?.let(linePattern::matcher) }.filter { it == null || it.matches() }
+    // Launch `parser`
+
+    var processed = 0
+    val parsed = configurationCacheEventsFromDebugLogLines(matchesFlow)
+        .takeWhile { it != null }
+        .map { it!! }
+        .filter { options.eventFilter(it) }
+        .onEach { processed++ }
+        .onCompletion {
+            require(processed > 0) {
+                "Could not recognize a single line from input"
+            }
+        }
 
     // Launch `aggregator`
     val aggregates = Channel<Aggregate>(options.channelCapacity)
     launch(Dispatchers.IO) {
-        try {
-            aggregateEvents(events, aggregates, options.eventDatabaseFile)
-        } finally {
-            aggregates.close()
+        aggregates.use {
+            aggregateEvents(parsed, options.eventDatabaseFile)
         }
     }
 
@@ -131,30 +134,82 @@ fun processDebugLog(
         writeJsonTo(options.speedscopeWriter, aggregates, options.prettyPrint)
         options.speedscopeWriter.flush()
     }
+
+    launch(Dispatchers.IO) {
+        val collector = DefaultCollector()
+        buildInstanceStats(parsed.filter { it.oid != null }).map { it!! }.collect {
+            collector.collect(it.context, it.objectType, it.oid, it.hash, it.length)
+        }
+        collector.printStats()
+    }
+}
+
+data class InstanceStats(val context: String, val objectType: String, val oid: String, val hash: String, val length: Long)
+
+private suspend fun buildInstanceStats(parsedEvents: Flow<ParsedEvent?>): Flow<InstanceStats?> {
+    data class InstanceData(
+        val context: Context,
+        val frame: String,
+        val oid: String,
+        val hash: String,
+        val offset: Long
+    )
+
+    val stack = mutableListOf<InstanceData>()
+    val instanceStats = flow {
+        parsedEvents
+            .map { it!! }
+            .collect { event ->
+                when (event.type) {
+                    "O" -> stack.add(InstanceData(event.profile, event.frame, event.oid!!, event.hash!!, event.at))
+                    "C" -> {
+                        val top = stack.removeLast()
+                        require(top.oid == event.oid)
+                        require(top.hash == event.hash)
+                        require(top.context == event.profile)
+                        emit(InstanceStats(top.context, top.frame, top.oid, top.hash, event.at - top.offset))
+                    }
+                    else -> error("Unexpected type ${event.type}")
+                }
+            }
+    }
+    require(stack.isEmpty())
+    return instanceStats
 }
 
 
 private
-suspend fun aggregateEvents(
-    events: Channel<ParsedEvent>,
-    aggregates: Channel<Aggregate>,
+suspend fun <T> Channel<T>.use(action: suspend Channel<T>.() -> Unit) {
+    try {
+        action()
+    } finally {
+        close()
+    }
+}
+
+
+private
+suspend fun Channel<Aggregate>.aggregateEvents(
+    events: Flow<ParsedEvent?>,
     databaseFile: Path
 ) {
     EventStore(databaseFile).use { eventStore ->
 
         // Insert all events while notifying the writer whenever a new frame is discovered
-        for (e in events) {
-            eventStore.store(e)?.let { newFrame ->
-                aggregates.send(Aggregate.Frame(newFrame))
+        events.collect { e ->
+            if (e != null) {
+                eventStore.store(e)?.let { newFrame ->
+                    send(Aggregate.Frame(newFrame))
+                }
             }
         }
 
         // Notify writer about all profiles
         for (p in eventStore.queryProfiles()) {
-            aggregates.send(Aggregate.BeginProfile(p.name, p.lastValue))
+            send(Aggregate.BeginProfile(p.name, p.lastValue))
 
             for (e in eventStore.eventsOf(p)) {
-                aggregates.send(
+                send(
                     Aggregate.Event(
                         e.type,
                         e.frameIndex - 1 /* db is one-based, output model is zero-based */,
@@ -267,42 +322,44 @@ data class ParsedEvent(
     val profile: String,
     val type: String,
     val frame: String,
-    val at: Long
+    val at: Long,
+    val oid: String?,
+    val hash: String?
 )
 
-
 private
-fun configurationCacheEventsFromDebugLogLines(lines: Sequence<String>) = sequence {
-    // Example log line:
-    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache...] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
-    val linePattern = logLinePattern()
-    lines.forEachIndexed { index, line ->
-        val matcher = linePattern.matcher(line)
-        if (matcher.matches()) {
-            val jsonEvent = matcher.group(1)
-            try {
-                val parsedEvent = JsonParser
-                    .parseString(jsonEvent)
-                    .asJsonObject.run {
-                        ParsedEvent(
-                            sequenceNumber = getLong("sn"),
-                            profile = getString("profile"),
-                            type = getString("type"),
-                            frame = getString("frame"),
-                            at = getLong("at")
-                        )
-                    }
-                yield(parsedEvent)
-            } catch (e: JsonParseException) {
-                throw IllegalArgumentException("line ${index + 1}: failed to parse $jsonEvent", e)
+fun configurationCacheEventsFromDebugLogLines(matchers: Flow<Matcher?>): Flow<ParsedEvent?> {
+    return matchers
+        .map { matcher ->
+            matcher?.group(1)?.let { jsonEvent ->
+                try {
+                    JsonParser
+                        .parseString(jsonEvent)
+                        .asJsonObject.run {
+                            ParsedEvent(
+                                sequenceNumber = getLong("sn"),
+                                profile = getString("profile"),
+                                type = getString("type"),
+                                frame = getString("frame"),
+                                at = getLong("at"),
+                                oid = getStringOrNull("oid"),
+                                hash = getStringOrNull("hash")
+                            )
+                        }
+                } catch (e: JsonParseException) {
+                    throw IllegalArgumentException("failed to parse $jsonEvent", e)
+                }
             }
         }
-    }
 }
+
 
 
 private
 fun JsonObject.getString(memberName: String): String = get(memberName)!!.asString
+
+private
+fun JsonObject.getStringOrNull(memberName: String): String? = get(memberName)?.asString
 
 
 private
@@ -311,5 +368,8 @@ fun JsonObject.getLong(memberName: String) = get(memberName)!!.asLong
 
 private
 fun logLinePattern(): Pattern {
+    // Example log line:
+    // 2020-08-13T15:19:11.495-0300 [DEBUG] [org.gradle.configurationcache...] {"profile":"state","type":"O","frame":"Gradle","at":6,"sn":1}
     return Pattern.compile("[0-9:T.\\-+]+ \\[DEBUG\\] \\[org\\.gradle\\.configurationcache(?:\\.DefaultConfigurationCache)?\\] (\\{.*?})")
 }
+
